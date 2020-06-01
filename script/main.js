@@ -1,14 +1,14 @@
 const app = new Vue({
-  el: '#find-song', 
+  el: '#search', 
   data: {
     findSongs: [], 
-    songSearch: '', 
+    searchArtist: '', 
     modal2: false, 
     songLyrics: []
   },
   methods: {
     handleSubmit: function(){
-      fetch('https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.search?q_track_artist='+this.songSearch+'&page_size=10&page=1&s_track_rating=desc&f_has_lyrics=1&apikey=b423b10f9ea2ae8ac7a91deda0c4ffa7')
+      fetch('https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.search?q_track_artist='+this.searchArtist+'&page_size=10&page=1&s_track_rating=desc&f_has_lyrics=1&apikey=b423b10f9ea2ae8ac7a91deda0c4ffa7')
     .then(response => response.json())
     .then(findSongsResponce => {
       this.findSongs = findSongsResponce.message.body.track_list; 
