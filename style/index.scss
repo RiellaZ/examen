@@ -1,0 +1,29 @@
+body {
+    width: 100%;
+    margin: auto;
+}
+.bg-light {
+    background-color: #495057;
+}
+.btn-outline-success {
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+}
+
+.btn-outline-success:hover {
+    background-color: orangered;
+    border-color: orangered;
+}
+
+.carousel-caption {
+    bottom: 40%;
+}
+
+h5 {
+    font-size: 4rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
